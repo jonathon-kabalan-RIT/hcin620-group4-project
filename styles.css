@@ -56,6 +56,11 @@ a {
     gap: 1.5rem;
 }
 
+.navbar-links a.active {
+    font-weight: 400;
+    color: #0055ff;
+}
+
 /* HOMEPAGE CLASS STYLES */
 
 .homepage-content-container {
