@@ -20,10 +20,19 @@ body {
 /* TEXT STYLES */
 
 p {
-    color: #6b6b6b;
+    color: #454545;
     font-size: 1rem;
     line-height: 150%;
     margin: 0px;
+}
+
+p b {
+    font-weight: 600;
+    color: inherit;
+}
+
+p i {
+    color: inherit;
 }
 
 a {
