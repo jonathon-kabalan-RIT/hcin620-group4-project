@@ -11,3 +11,4 @@ function updateScrollFade() {
 updateScrollFade();
 
 nav.addEventListener('scroll', updateScrollFade);
+window.addEventListener('resize', updateScrollFade);
