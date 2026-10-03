@@ -9,3 +9,5 @@ function updateScrollFade() {
 }
 
 updateScrollFade();
+
+nav.addEventListener('scroll', updateScrollFade);
