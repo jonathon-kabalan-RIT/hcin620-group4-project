@@ -75,21 +75,39 @@ a {
         flex-wrap: nowrap;
         overflow-x: auto;
         white-space: nowrap;
+
         scrollbar-width: none;
         -ms-overflow-style: none;
-        background-repeat: no-repeat;
-        background-size: 24px 100%, 24px 100%, 24px 100%, 24px 100%;
-        background-position: left center, right center, left center, right center;
-        background-attachment: local, local, scroll, scroll;
-        background-image:
-            linear-gradient(to right, #fff, #fff),
-            linear-gradient(to left, #fff, #fff),
-            linear-gradient(to right, #fff, transparent),
-            linear-gradient(to left, #fff, transparent);
+
+        mask-image: linear-gradient(to right, black, black);
+        -webkit-mask-image: linear-gradient(to right, black, black);
     }
 
     .navbar-links::-webkit-scrollbar {
         display: none;
+    }
+
+    .navbar-links.fade-left {
+        mask-image: linear-gradient(to right, transparent, black 24px);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 24px);
+    }
+
+    .navbar-links.fade-right {
+        mask-image: linear-gradient(to left, transparent, black 24px);
+        -webkit-mask-image: linear-gradient(to left, transparent, black 24px);
+    }
+
+    .navbar-links.fade-left.fade-right {
+        mask-image: linear-gradient(to right,
+                transparent,
+                black 24px,
+                black calc(100% - 24px),
+                transparent);
+        -webkit-mask-image: linear-gradient(to right,
+                transparent,
+                black 24px,
+                black calc(100% - 24px),
+                transparent);
     }
 }
 

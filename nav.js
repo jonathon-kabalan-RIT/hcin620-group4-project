@@ -4,7 +4,8 @@ function updateScrollFade() {
     const canScrollLeft = nav.scrollLeft > 0;
     const canScrollRight = nav.scrollLeft < (nav.scrollWidth - nav.clientWidth - 1);
 
-    console.log('canScrollLeft:', canScrollLeft, '| canScrollRight:', canScrollRight);
+    nav.classList.toggle('fade-left', canScrollLeft);
+    nav.classList.toggle('fade-right', canScrollRight);
 }
 
 updateScrollFade();
