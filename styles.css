@@ -65,6 +65,40 @@ a {
     gap: 1.5rem;
 }
 
+@media (max-width: 480px) {
+    .navbar-links {
+        /* prevent wrapping, allow horizontal scroll instead */
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        /* fade effect at edges */
+        mask-image: linear-gradient(to right,
+                transparent 0,
+                black 24px,
+                black calc(100% - 24px),
+                transparent 100%);
+        -webkit-mask-image: linear-gradient(to right,
+                transparent 0,
+                black 24px,
+                black calc(100% - 24px),
+                transparent 100%);
+        /* hide the scrollbar visually but keep it functional */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .navbar-links::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari */
+    }
+
+    .navbar-links li {
+        flex-shrink: 0;
+        /* stop list items from shrinking/wrapping */
+    }
+}
+
+
 .navbar-links a.active {
     font-weight: 400;
     color: #0055ff;
