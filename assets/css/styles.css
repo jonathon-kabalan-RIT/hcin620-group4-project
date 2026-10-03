@@ -17,6 +17,17 @@ body {
     gap: 2rem;
 }
 
+.page-content-container {
+    width: 100%;
+    max-width: 720px;
+    padding: 2rem;
+    /* flexbox */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
 /* TEXT STYLES */
 
 p {
@@ -126,16 +137,7 @@ a {
 
 /* HOMEPAGE CLASS STYLES */
 
-.homepage-content-container {
-    width: 100%;
-    max-width: 720px;
-    padding: 2rem;
-    /* flexbox */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
+
 
 .page-title {
     width: 100%;
@@ -161,17 +163,6 @@ a {
 }
 
 /* FOCUS PAGE CLASS STYLES */
-
-.page-content-container {
-    width: 100%;
-    max-width: 720px;
-    padding: 2rem;
-    /* flexbox */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
 
 .focus-content {
     padding-top: 2rem;

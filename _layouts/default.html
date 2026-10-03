@@ -12,10 +12,11 @@
 </head>
 
 <body>
-    {% include page-heading.html %}
-    {% include nav.html %}
-
-    {{ content }}
+    <div class="page-content-container">
+        {% include page-heading.html %}
+        {% include nav.html %}
+        {{ content }}
+    </div>
 
     <script src="{{ '/assets/js/nav.js' | relative_url }}"></script>
 </body>
