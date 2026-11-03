@@ -82,52 +82,47 @@ a {
     /* flexbox */
     display: flex;
     gap: 1.5rem;
+    /* scroll + fade */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    mask-image: linear-gradient(to right, black, black);
+    -webkit-mask-image: linear-gradient(to right, black, black);
+}
+
+.navbar-links::-webkit-scrollbar {
+    display: none;
 }
 
 .navbar-links li {
     flex-shrink: 0;
 }
 
-@media (max-width: 480px) {
-    .navbar-links {
-        gap: 1.25rem;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        white-space: nowrap;
+.navbar-links.fade-left {
+    mask-image: linear-gradient(to right, transparent, black 24px);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 24px);
+}
 
-        scrollbar-width: none;
-        -ms-overflow-style: none;
+.navbar-links.fade-right {
+    mask-image: linear-gradient(to left, transparent, black 24px);
+    -webkit-mask-image: linear-gradient(to left, transparent, black 24px);
+}
 
-        mask-image: linear-gradient(to right, black, black);
-        -webkit-mask-image: linear-gradient(to right, black, black);
-    }
-
-    .navbar-links::-webkit-scrollbar {
-        display: none;
-    }
-
-    .navbar-links.fade-left {
-        mask-image: linear-gradient(to right, transparent, black 24px);
-        -webkit-mask-image: linear-gradient(to right, transparent, black 24px);
-    }
-
-    .navbar-links.fade-right {
-        mask-image: linear-gradient(to left, transparent, black 24px);
-        -webkit-mask-image: linear-gradient(to left, transparent, black 24px);
-    }
-
-    .navbar-links.fade-left.fade-right {
-        mask-image: linear-gradient(to right,
-                transparent,
-                black 24px,
-                black calc(100% - 24px),
-                transparent);
-        -webkit-mask-image: linear-gradient(to right,
-                transparent,
-                black 24px,
-                black calc(100% - 24px),
-                transparent);
-    }
+.navbar-links.fade-left.fade-right {
+    mask-image: linear-gradient(to right,
+            transparent,
+            black 24px,
+            black calc(100% - 24px),
+            transparent);
+    -webkit-mask-image: linear-gradient(to right,
+            transparent,
+            black 24px,
+            black calc(100% - 24px),
+            transparent);
 }
 
 .navbar-links a.active {
